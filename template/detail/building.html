@@ -1,0 +1,38 @@
+<h4 style="margin-top: 15px">{{ title }}</h4>
+<h5>Building's details</h5>
+<form>
+  <div class="row">
+    <div class="six columns">
+       <label for="idInput">ID</label>
+       <input class="u-full-width" type="text" id="id" value="{{ id }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="copyrightInput">Copyright</label>
+       <input class="u-full-width" type="text" id="copyright" value="{{ copyright }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for="editionInput">Founded</label>
+       <input class="u-full-width" type="text" id="edition" value="{{edition }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="languageInput">Language</label>
+       <input class="u-full-width" type="text" id="language" value="{{ language }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for=" authorInput">Architect</label>
+       <a href="/#/architectById/{{ architect_id }}" data-navigo>
+         <input class="u-full-width" type="button" id=" architect" value="{{ architect }}" readonly/>
+       </a>
+    </div>
+    <div class="six columns">
+       <label for="languageInput">City</label>
+       <a href="/#/cityById/{{ city_id }}" data-navigo>
+         <input class="u-full-width" type="button" id="city" value="{{ city }}" readonly/>
+       </a>
+    </div>
+  </div>
+</form>

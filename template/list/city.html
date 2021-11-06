@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Cities Information</h3>
+This section presents information about cities
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/#/cityById/{{ id }}' data-navigo> {{ city }}</a></li>
+  {{/.}}
+</ul>

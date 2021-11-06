@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Buildings Information</h3>
+This section presents information about buildings
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/#/buildingById/{{ id }}' data-navigo> {{ title }}</a></li>
+  {{/.}}
+</ul>
