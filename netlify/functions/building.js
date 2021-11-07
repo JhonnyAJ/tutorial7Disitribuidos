@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 let buildings = [
 {
   "id": "1",
-  "title": "Operating System Concepts",
+  "title": "Empire State",
   "edition": "9th",
   "copyright": 2012,
   "language": "ENGLISH",
@@ -19,7 +19,7 @@ let buildings = [
 },
 {
   "id": "2",
-  "title": "Database System Concepts",
+  "title": "Banco Nacional",
   "edition": "6th",
   "copyright": 2010,
   "language": "ENGLISH",
@@ -31,7 +31,7 @@ let buildings = [
 },
 {
   "id": "3",
-  "title": "Computer Networks",
+  "title": "Washington",
   "edition": "5th",
   "copyright": 2010,
   "language": "ENGLISH",
@@ -43,7 +43,7 @@ let buildings = [
 },
 {
   "id": "4",
-  "title": "Modern Operating Systems",
+  "title": "Edificio 1",
   "edition": "4th",
   "copyright": 2014,
   "language": "ENGLISH",

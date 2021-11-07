@@ -4,10 +4,10 @@ const serverless = require('serverless-http');
 const exp = express();
 const bodyParser = require('body-parser');
 
-let authors = [
+let architects = [
   {
     "id": "1",
-    "author": "Abraham Silberschatz",
+    "architect": "Abraham Silberschatz",
     "nationality": "Israelis / American",
     "birth_year": 1952,
     "fields": "Database Systems, Operating Systems",
@@ -24,7 +24,7 @@ let authors = [
   },
   {
     "id": "2",
-    "author": "Andrew S. Tanenbaum",
+    "architect": "Andrew S. Tanenbaum",
     "nationality": "Dutch / American",
     "birth_year": 1944,
     "fields": "Distributed computing, Operating Systems",
@@ -44,46 +44,46 @@ let authors = [
 const app = express.Router();
 
 app.get('/', (req, res) => {
-  res.json(authors);
+  res.json(architects);
 })
 
 app.get('/:id', (req, res) => {
-  let author = authors.find(i => i.id == req.params.id);
-  if (author == undefined)
+  let architect = architects.find(i => i.id == req.params.id);
+  if (architect == undefined)
     res.status(404).send('Author not found');
   else
-    res.json(author);
+    res.json(architect);
 })
 
 app.post('/:id', (req, res) => {
-  let index = authors.findIndex(i => i.id == req.params.id);
+  let index = architects.findIndex(i => i.id == req.params.id);
   if (index != -1)
     res.status(404).send('Author already exits'); 
   else {
-    authors.push(body);
+    architects.push(body);
   }
 })
 
 app.put('/', (req, res) => {
-  let index = authors.findIndex(i => i.id == req.params.id);
+  let index = architects.findIndex(i => i.id == req.params.id);
   if (index == -1)
     res.status(404).send('Author not found');
   else {
-    authors[index] = body;
+    architects[index] = body;
   }
 })
 
 app.delete('/:id', (req, res) => {
-  let index = authors.findIndex(i => i.id == req.params.id);
+  let index = architects.findIndex(i => i.id == req.params.id);
   if (index == -1)
     return resolve();
   else {
-    authors = authors.filter(i => i.id != req.params.id);
+    architects = architects.filter(i => i.id != req.params.id);
   }
 })
 
 exp.use(bodyParser.json());
-exp.use('/.netlify/functions/author', app);
+exp.use('/.netlify/functions/architect', app);
 
 module.exports = exp;
 module.exports.handler = serverless(exp);
