@@ -49,7 +49,7 @@ function init() {
       getAll(architectsApi, 'architect');
     },
     '/cities': () => {
-      getAll(buildingsApi, 'building');
+      getAll(citiesApi, 'city');
     },
     '/buildingById/:id': ({ data, params, queryString }) => {
       getById(data, buildingsApi, 'building');
